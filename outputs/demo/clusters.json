@@ -1,0 +1,1631 @@
+[
+ {
+  "cluster_id": "K000",
+  "members": [
+   "C00146",
+   "C00223",
+   "C00343",
+   "C00355",
+   "C00566",
+   "C00718",
+   "C00799",
+   "C00875",
+   "C01099",
+   "C01159",
+   "C01248",
+   "C01710",
+   "C02369",
+   "C02382",
+   "C02737",
+   "C02754",
+   "C03119",
+   "C03156",
+   "C03346",
+   "C03388",
+   "C03596",
+   "C03623",
+   "C03651",
+   "C03718",
+   "C03811",
+   "C03960"
+  ],
+  "size": 26,
+  "mean_score": 0.952160432501391,
+  "evidence": [
+   {
+    "a": "C00223",
+    "b": "C03346",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00718",
+    "b": "C03346",
+    "why": [
+     "9 invoices C00718\u2192C03346",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02369",
+    "b": "C03346",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C03346",
+    "why": [
+     "5 invoices C03346\u2192C00875"
+    ]
+   },
+   {
+    "a": "C03346",
+    "b": "C03388",
+    "why": [
+     "9 invoices C03346\u2192C03388"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C01099",
+    "why": [
+     "9 invoices C00343\u2192C01099"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C01099",
+    "why": [
+     "5 invoices C00355\u2192C01099",
+     "6 invoices C01099\u2192C00355"
+    ]
+   },
+   {
+    "a": "C00566",
+    "b": "C01099",
+    "why": [
+     "3 invoices C00566\u2192C01099",
+     "3 invoices C01099\u2192C00566"
+    ]
+   },
+   {
+    "a": "C01099",
+    "b": "C01159",
+    "why": [
+     "2 invoices C01099\u2192C01159",
+     "5 invoices C01159\u2192C01099"
+    ]
+   },
+   {
+    "a": "C01099",
+    "b": "C01710",
+    "why": [
+     "4 invoices C01099\u2192C01710",
+     "4 invoices C01710\u2192C01099"
+    ]
+   },
+   {
+    "a": "C01099",
+    "b": "C03623",
+    "why": [
+     "4 invoices C01099\u2192C03623",
+     "4 invoices C03623\u2192C01099"
+    ]
+   },
+   {
+    "a": "C00146",
+    "b": "C03811",
+    "why": [
+     "11 invoices C03811\u2192C00146",
+     "3 invoices C00146\u2192C03811",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C03811",
+    "why": [
+     "11 invoices C00875\u2192C03811",
+     "4 invoices C03811\u2192C00875",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03596",
+    "b": "C03811",
+    "why": [
+     "6 invoices C03596\u2192C03811",
+     "6 invoices C03811\u2192C03596",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03651",
+    "b": "C03811",
+    "why": [
+     "3 invoices C03811\u2192C03651",
+     "5 invoices C03651\u2192C03811",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03811",
+    "b": "C03960",
+    "why": [
+     "10 invoices C03960\u2192C03811",
+     "8 invoices C03811\u2192C03960",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C01159",
+    "why": [
+     "2 invoices C00343\u2192C01159",
+     "3 invoices C01159\u2192C00343"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C01159",
+    "why": [
+     "3 invoices C01159\u2192C00355",
+     "9 invoices C00355\u2192C01159"
+    ]
+   },
+   {
+    "a": "C00566",
+    "b": "C01159",
+    "why": [
+     "4 invoices C01159\u2192C00566",
+     "5 invoices C00566\u2192C01159"
+    ]
+   },
+   {
+    "a": "C01159",
+    "b": "C03623",
+    "why": [
+     "4 invoices C03623\u2192C01159",
+     "6 invoices C01159\u2192C03623"
+    ]
+   },
+   {
+    "a": "C01159",
+    "b": "C01710",
+    "why": [
+     "3 invoices C01710\u2192C01159"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C00799",
+    "why": [
+     "shared controller P00071"
+    ]
+   },
+   {
+    "a": "C00799",
+    "b": "C01248",
+    "why": [
+     "14 invoices C00799\u2192C01248"
+    ]
+   },
+   {
+    "a": "C00799",
+    "b": "C02754",
+    "why": [
+     "14 invoices C02754\u2192C00799"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C01710",
+    "why": [
+     "3 invoices C01710\u2192C00343",
+     "6 invoices C00343\u2192C01710",
+     "shared controller P00074"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C01710",
+    "why": [
+     "4 invoices C00355\u2192C01710",
+     "6 invoices C01710\u2192C00355"
+    ]
+   },
+   {
+    "a": "C00566",
+    "b": "C01710",
+    "why": [
+     "4 invoices C00566\u2192C01710",
+     "8 invoices C01710\u2192C00566"
+    ]
+   },
+   {
+    "a": "C01710",
+    "b": "C03623",
+    "why": [
+     "2 invoices C03623\u2192C01710",
+     "5 invoices C01710\u2192C03623"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C00355",
+    "why": [
+     "3 invoices C00343\u2192C00355",
+     "7 invoices C00355\u2192C00343"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C00566",
+    "why": [
+     "4 invoices C00355\u2192C00566",
+     "7 invoices C00566\u2192C00355"
+    ]
+   },
+   {
+    "a": "C00355",
+    "b": "C03623",
+    "why": [
+     "4 invoices C03623\u2192C00355",
+     "9 invoices C00355\u2192C03623"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C03623",
+    "why": [
+     "2 invoices C03623\u2192C00343",
+     "3 invoices C00343\u2192C03623"
+    ]
+   },
+   {
+    "a": "C00566",
+    "b": "C03623",
+    "why": [
+     "4 invoices C00566\u2192C03623",
+     "7 invoices C03623\u2192C00566"
+    ]
+   },
+   {
+    "a": "C00146",
+    "b": "C03960",
+    "why": [
+     "3 invoices C03960\u2192C00146",
+     "6 invoices C00146\u2192C03960",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C03960",
+    "why": [
+     "13 invoices C03960\u2192C00875",
+     "6 invoices C00875\u2192C03960",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03596",
+    "b": "C03960",
+    "why": [
+     "9 invoices C03596\u2192C03960",
+     "9 invoices C03960\u2192C03596",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03651",
+    "b": "C03960",
+    "why": [
+     "14 invoices C03651\u2192C03960",
+     "3 invoices C03960\u2192C03651",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02382",
+    "b": "C03156",
+    "why": [
+     "15 invoices C03156\u2192C02382",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C03156",
+    "b": "C03718",
+    "why": [
+     "11 invoices C03718\u2192C03156",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03119",
+    "b": "C03156",
+    "why": [
+     "4 invoices C03119\u2192C03156",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01248",
+    "b": "C02737",
+    "why": [
+     "14 invoices C01248\u2192C02737"
+    ]
+   },
+   {
+    "a": "C02737",
+    "b": "C02754",
+    "why": [
+     "14 invoices C02737\u2192C02754"
+    ]
+   },
+   {
+    "a": "C00343",
+    "b": "C00566",
+    "why": [
+     "10 invoices C00566\u2192C00343",
+     "3 invoices C00343\u2192C00566"
+    ]
+   },
+   {
+    "a": "C00146",
+    "b": "C00875",
+    "why": [
+     "4 invoices C00875\u2192C00146",
+     "6 invoices C00146\u2192C00875",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C03596",
+    "why": [
+     "5 invoices C00875\u2192C03596",
+     "6 invoices C03596\u2192C00875",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C03651",
+    "why": [
+     "4 invoices C03651\u2192C00875",
+     "7 invoices C00875\u2192C03651",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00875",
+    "b": "C01248",
+    "why": [
+     "3 invoices C01248\u2192C00875"
+    ]
+   },
+   {
+    "a": "C02382",
+    "b": "C03119",
+    "why": [
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02754",
+    "b": "C03718",
+    "why": [
+     "6 invoices C03718\u2192C02754"
+    ]
+   },
+   {
+    "a": "C02382",
+    "b": "C03718",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00146",
+    "b": "C03596",
+    "why": [
+     "7 invoices C00146\u2192C03596",
+     "8 invoices C03596\u2192C00146",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03596",
+    "b": "C03651",
+    "why": [
+     "4 invoices C03651\u2192C03596",
+     "7 invoices C03596\u2192C03651",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00223",
+    "b": "C00718",
+    "why": [
+     "shared address",
+     "shared controller P00080"
+    ]
+   },
+   {
+    "a": "C00223",
+    "b": "C02369",
+    "why": [
+     "9 invoices C00223\u2192C02369",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00223",
+    "b": "C03388",
+    "why": [
+     "9 invoices C03388\u2192C00223"
+    ]
+   },
+   {
+    "a": "C00718",
+    "b": "C02369",
+    "why": [
+     "9 invoices C02369\u2192C00718",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00146",
+    "b": "C03651",
+    "why": [
+     "5 invoices C00146\u2192C03651",
+     "8 invoices C03651\u2192C00146",
+     "shared address"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K001",
+  "members": [
+   "C00657",
+   "C01179",
+   "C01466",
+   "C01472",
+   "C01755",
+   "C02137",
+   "C02146",
+   "C02513",
+   "C02760",
+   "C02939",
+   "C02990",
+   "C03480"
+  ],
+  "size": 12,
+  "mean_score": 0.838112892404801,
+  "evidence": [
+   {
+    "a": "C01179",
+    "b": "C01466",
+    "why": [
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C01466",
+    "b": "C02146",
+    "why": [
+     "11 invoices C01466\u2192C02146",
+     "shared address",
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C01466",
+    "b": "C02513",
+    "why": [
+     "shared address",
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C01466",
+    "b": "C02137",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01466",
+    "b": "C03480",
+    "why": [
+     "11 invoices C03480\u2192C01466",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01179",
+    "b": "C02513",
+    "why": [
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C02146",
+    "b": "C02513",
+    "why": [
+     "shared address",
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C02137",
+    "b": "C02513",
+    "why": [
+     "11 invoices C02137\u2192C02513",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02513",
+    "b": "C03480",
+    "why": [
+     "11 invoices C02513\u2192C03480",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02137",
+    "b": "C03480",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02146",
+    "b": "C03480",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01472",
+    "b": "C02990",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01755",
+    "b": "C02990",
+    "why": [
+     "4 invoices C01755\u2192C02990",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02760",
+    "b": "C02990",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02939",
+    "b": "C02990",
+    "why": [
+     "4 invoices C02990\u2192C02939",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01472",
+    "b": "C02939",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01755",
+    "b": "C02939",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02760",
+    "b": "C02939",
+    "why": [
+     "4 invoices C02939\u2192C02760",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02137",
+    "b": "C02939",
+    "why": [
+     "25 invoices C02137\u2192C02939"
+    ]
+   },
+   {
+    "a": "C00657",
+    "b": "C01472",
+    "why": [
+     "shared controller P01018"
+    ]
+   },
+   {
+    "a": "C01472",
+    "b": "C01755",
+    "why": [
+     "4 invoices C01472\u2192C01755",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01472",
+    "b": "C02760",
+    "why": [
+     "4 invoices C02760\u2192C01472",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01755",
+    "b": "C02760",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01179",
+    "b": "C02146",
+    "why": [
+     "11 invoices C02146\u2192C01179",
+     "shared controller P00072"
+    ]
+   },
+   {
+    "a": "C02137",
+    "b": "C02146",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01179",
+    "b": "C02137",
+    "why": [
+     "11 invoices C01179\u2192C02137"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K002",
+  "members": [
+   "C00619",
+   "C01877",
+   "C02187",
+   "C02302",
+   "C02698",
+   "C03034",
+   "C03289",
+   "C03391"
+  ],
+  "size": 8,
+  "mean_score": 0.9999884345267238,
+  "evidence": [
+   {
+    "a": "C02302",
+    "b": "C03034",
+    "why": [
+     "3 invoices C02302\u2192C03034",
+     "3 invoices C03034\u2192C02302",
+     "shared controller P00073",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C03034",
+    "why": [
+     "2 invoices C03034\u2192C01877",
+     "8 invoices C01877\u2192C03034",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02187",
+    "b": "C03034",
+    "why": [
+     "4 invoices C02187\u2192C03034",
+     "4 invoices C03034\u2192C02187",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C03034",
+    "b": "C03289",
+    "why": [
+     "2 invoices C03034\u2192C03289",
+     "3 invoices C03289\u2192C03034",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C03034",
+    "why": [
+     "5 invoices C00619\u2192C03034",
+     "6 invoices C03034\u2192C00619"
+    ]
+   },
+   {
+    "a": "C02698",
+    "b": "C03034",
+    "why": [
+     "4 invoices C02698\u2192C03034",
+     "6 invoices C03034\u2192C02698"
+    ]
+   },
+   {
+    "a": "C03034",
+    "b": "C03391",
+    "why": [
+     "6 invoices C03034\u2192C03391",
+     "6 invoices C03391\u2192C03034"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C02187",
+    "why": [
+     "4 invoices C01877\u2192C02187",
+     "5 invoices C02187\u2192C01877",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02187",
+    "b": "C02302",
+    "why": [
+     "2 invoices C02187\u2192C02302",
+     "9 invoices C02302\u2192C02187",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02187",
+    "b": "C03289",
+    "why": [
+     "5 invoices C02187\u2192C03289",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C02187",
+    "why": [
+     "3 invoices C02187\u2192C00619",
+     "5 invoices C00619\u2192C02187"
+    ]
+   },
+   {
+    "a": "C02187",
+    "b": "C02698",
+    "why": [
+     "4 invoices C02698\u2192C02187",
+     "6 invoices C02187\u2192C02698"
+    ]
+   },
+   {
+    "a": "C02187",
+    "b": "C03391",
+    "why": [
+     "9 invoices C03391\u2192C02187"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C03391",
+    "why": [
+     "4 invoices C03391\u2192C00619",
+     "5 invoices C00619\u2192C03391"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C03391",
+    "why": [
+     "4 invoices C03391\u2192C01877",
+     "7 invoices C01877\u2192C03391"
+    ]
+   },
+   {
+    "a": "C02302",
+    "b": "C03391",
+    "why": [
+     "3 invoices C02302\u2192C03391",
+     "5 invoices C03391\u2192C02302"
+    ]
+   },
+   {
+    "a": "C02698",
+    "b": "C03391",
+    "why": [
+     "5 invoices C02698\u2192C03391",
+     "6 invoices C03391\u2192C02698"
+    ]
+   },
+   {
+    "a": "C03289",
+    "b": "C03391",
+    "why": [
+     "10 invoices C03289\u2192C03391",
+     "4 invoices C03391\u2192C03289"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C02302",
+    "why": [
+     "4 invoices C01877\u2192C02302",
+     "4 invoices C02302\u2192C01877",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C03289",
+    "why": [
+     "6 invoices C01877\u2192C03289",
+     "7 invoices C03289\u2192C01877",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01877",
+    "b": "C02698",
+    "why": [
+     "3 invoices C02698\u2192C01877",
+     "4 invoices C01877\u2192C02698"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C02302",
+    "why": [
+     "3 invoices C00619\u2192C02302",
+     "3 invoices C02302\u2192C00619"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C02698",
+    "why": [
+     "5 invoices C02698\u2192C00619",
+     "6 invoices C00619\u2192C02698"
+    ]
+   },
+   {
+    "a": "C00619",
+    "b": "C03289",
+    "why": [
+     "2 invoices C00619\u2192C03289",
+     "4 invoices C03289\u2192C00619"
+    ]
+   },
+   {
+    "a": "C02302",
+    "b": "C03289",
+    "why": [
+     "3 invoices C02302\u2192C03289",
+     "8 invoices C03289\u2192C02302",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02302",
+    "b": "C02698",
+    "why": [
+     "3 invoices C02302\u2192C02698",
+     "4 invoices C02698\u2192C02302"
+    ]
+   },
+   {
+    "a": "C02698",
+    "b": "C03289",
+    "why": [
+     "3 invoices C03289\u2192C02698",
+     "9 invoices C02698\u2192C03289"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K003",
+  "members": [
+   "C00048",
+   "C00394",
+   "C00814",
+   "C01061",
+   "C01637",
+   "C03441",
+   "C03550"
+  ],
+  "size": 7,
+  "mean_score": 0.999976003390859,
+  "evidence": [
+   {
+    "a": "C00048",
+    "b": "C01061",
+    "why": [
+     "11 invoices C01061\u2192C00048",
+     "6 invoices C00048\u2192C01061",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00394",
+    "b": "C01061",
+    "why": [
+     "5 invoices C00394\u2192C01061",
+     "8 invoices C01061\u2192C00394",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00814",
+    "b": "C01061",
+    "why": [
+     "5 invoices C00814\u2192C01061",
+     "5 invoices C01061\u2192C00814",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01061",
+    "b": "C03550",
+    "why": [
+     "4 invoices C03550\u2192C01061",
+     "6 invoices C01061\u2192C03550",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01061",
+    "b": "C01637",
+    "why": [
+     "4 invoices C01061\u2192C01637",
+     "5 invoices C01637\u2192C01061"
+    ]
+   },
+   {
+    "a": "C01061",
+    "b": "C03441",
+    "why": [
+     "5 invoices C01061\u2192C03441",
+     "6 invoices C03441\u2192C01061"
+    ]
+   },
+   {
+    "a": "C00048",
+    "b": "C03441",
+    "why": [
+     "9 invoices C00048\u2192C03441",
+     "9 invoices C03441\u2192C00048",
+     "shared address",
+     "shared controller P00075"
+    ]
+   },
+   {
+    "a": "C00048",
+    "b": "C00394",
+    "why": [
+     "2 invoices C00048\u2192C00394",
+     "2 invoices C00394\u2192C00048",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00048",
+    "b": "C00814",
+    "why": [
+     "2 invoices C00048\u2192C00814",
+     "4 invoices C00814\u2192C00048",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00048",
+    "b": "C01637",
+    "why": [
+     "2 invoices C00048\u2192C01637",
+     "9 invoices C01637\u2192C00048",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00048",
+    "b": "C03550",
+    "why": [
+     "5 invoices C03550\u2192C00048",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00394",
+    "b": "C00814",
+    "why": [
+     "5 invoices C00394\u2192C00814",
+     "6 invoices C00814\u2192C00394",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00814",
+    "b": "C01637",
+    "why": [
+     "4 invoices C01637\u2192C00814",
+     "6 invoices C00814\u2192C01637",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00814",
+    "b": "C03441",
+    "why": [
+     "7 invoices C03441\u2192C00814",
+     "8 invoices C00814\u2192C03441",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00814",
+    "b": "C03550",
+    "why": [
+     "10 invoices C00814\u2192C03550",
+     "4 invoices C03550\u2192C00814",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00394",
+    "b": "C01637",
+    "why": [
+     "4 invoices C00394\u2192C01637",
+     "4 invoices C01637\u2192C00394",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01637",
+    "b": "C03441",
+    "why": [
+     "3 invoices C01637\u2192C03441",
+     "5 invoices C03441\u2192C01637",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01637",
+    "b": "C03550",
+    "why": [
+     "3 invoices C01637\u2192C03550",
+     "6 invoices C03550\u2192C01637",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00394",
+    "b": "C03441",
+    "why": [
+     "2 invoices C03441\u2192C00394",
+     "9 invoices C00394\u2192C03441",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00394",
+    "b": "C03550",
+    "why": [
+     "3 invoices C00394\u2192C03550",
+     "3 invoices C03550\u2192C00394",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C03441",
+    "b": "C03550",
+    "why": [
+     "5 invoices C03441\u2192C03550",
+     "6 invoices C03550\u2192C03441",
+     "shared address"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K004",
+  "members": [
+   "C00022",
+   "C00500",
+   "C00960",
+   "C01259",
+   "C02610",
+   "C03327",
+   "C03737"
+  ],
+  "size": 7,
+  "mean_score": 0.9999944601156437,
+  "evidence": [
+   {
+    "a": "C00022",
+    "b": "C01259",
+    "why": [
+     "3 invoices C01259\u2192C00022",
+     "4 invoices C00022\u2192C01259",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00500",
+    "b": "C01259",
+    "why": [
+     "4 invoices C00500\u2192C01259",
+     "6 invoices C01259\u2192C00500",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00960",
+    "b": "C01259",
+    "why": [
+     "6 invoices C00960\u2192C01259",
+     "8 invoices C01259\u2192C00960",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01259",
+    "b": "C02610",
+    "why": [
+     "3 invoices C01259\u2192C02610",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01259",
+    "b": "C03327",
+    "why": [
+     "3 invoices C01259\u2192C03327",
+     "7 invoices C03327\u2192C01259",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01259",
+    "b": "C03737",
+    "why": [
+     "2 invoices C01259\u2192C03737",
+     "5 invoices C03737\u2192C01259",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00022",
+    "b": "C00960",
+    "why": [
+     "12 invoices C00022\u2192C00960",
+     "6 invoices C00960\u2192C00022",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00500",
+    "b": "C00960",
+    "why": [
+     "3 invoices C00960\u2192C00500",
+     "5 invoices C00500\u2192C00960",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00960",
+    "b": "C02610",
+    "why": [
+     "6 invoices C00960\u2192C02610",
+     "8 invoices C02610\u2192C00960",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00960",
+    "b": "C03327",
+    "why": [
+     "6 invoices C00960\u2192C03327",
+     "7 invoices C03327\u2192C00960",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00960",
+    "b": "C03737",
+    "why": [
+     "4 invoices C03737\u2192C00960",
+     "6 invoices C00960\u2192C03737",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00022",
+    "b": "C03737",
+    "why": [
+     "2 invoices C00022\u2192C03737",
+     "8 invoices C03737\u2192C00022",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00500",
+    "b": "C03737",
+    "why": [
+     "11 invoices C03737\u2192C00500",
+     "4 invoices C00500\u2192C03737",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02610",
+    "b": "C03737",
+    "why": [
+     "10 invoices C02610\u2192C03737",
+     "7 invoices C03737\u2192C02610",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C03327",
+    "b": "C03737",
+    "why": [
+     "6 invoices C03327\u2192C03737",
+     "6 invoices C03737\u2192C03327",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00022",
+    "b": "C02610",
+    "why": [
+     "3 invoices C02610\u2192C00022",
+     "7 invoices C00022\u2192C02610",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00500",
+    "b": "C02610",
+    "why": [
+     "2 invoices C00500\u2192C02610",
+     "9 invoices C02610\u2192C00500",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C02610",
+    "b": "C03327",
+    "why": [
+     "4 invoices C02610\u2192C03327",
+     "7 invoices C03327\u2192C02610",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00022",
+    "b": "C00500",
+    "why": [
+     "4 invoices C00500\u2192C00022",
+     "5 invoices C00022\u2192C00500",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00500",
+    "b": "C03327",
+    "why": [
+     "9 invoices C03327\u2192C00500",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00022",
+    "b": "C03327",
+    "why": [
+     "4 invoices C00022\u2192C03327",
+     "6 invoices C03327\u2192C00022",
+     "shared phone"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K005",
+  "members": [
+   "C00290",
+   "C01052",
+   "C02304",
+   "C03067",
+   "C03513",
+   "C03894"
+  ],
+  "size": 6,
+  "mean_score": 0.8638876145426723,
+  "evidence": [
+   {
+    "a": "C00290",
+    "b": "C01052",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00290",
+    "b": "C02304",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00290",
+    "b": "C03067",
+    "why": [
+     "5 invoices C00290\u2192C03067",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C00290",
+    "b": "C03513",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01052",
+    "b": "C02304",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02304",
+    "b": "C03067",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C02304",
+    "b": "C03513",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03067",
+    "b": "C03894",
+    "why": [
+     "7 invoices C03894\u2192C03067",
+     "shared controller P00078"
+    ]
+   },
+   {
+    "a": "C01052",
+    "b": "C03067",
+    "why": [
+     "8 invoices C03067\u2192C01052",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C01052",
+    "b": "C03513",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C03067",
+    "b": "C03513",
+    "why": [
+     "5 invoices C03067\u2192C03513",
+     "shared address"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K006",
+  "members": [
+   "C00302",
+   "C01595",
+   "C01862",
+   "C03965"
+  ],
+  "size": 4,
+  "mean_score": 0.6508088509753496,
+  "evidence": [
+   {
+    "a": "C01595",
+    "b": "C03965",
+    "why": [
+     "5 invoices C01595\u2192C03965",
+     "shared controller P00070"
+    ]
+   },
+   {
+    "a": "C00302",
+    "b": "C03965",
+    "why": [
+     "5 invoices C03965\u2192C00302",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01862",
+    "b": "C03965",
+    "why": [
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C01595",
+    "b": "C01862",
+    "why": [
+     "5 invoices C01862\u2192C01595"
+    ]
+   },
+   {
+    "a": "C00302",
+    "b": "C01862",
+    "why": [
+     "shared address",
+     "shared phone"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K007",
+  "members": [
+   "C00265",
+   "C00384",
+   "C03074",
+   "C03453"
+  ],
+  "size": 4,
+  "mean_score": 0.919626765900653,
+  "evidence": [
+   {
+    "a": "C00265",
+    "b": "C00384",
+    "why": [
+     "6 invoices C00384\u2192C00265"
+    ]
+   },
+   {
+    "a": "C00265",
+    "b": "C03453",
+    "why": [
+     "9 invoices C03453\u2192C00265",
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C03074",
+    "b": "C03453",
+    "why": [
+     "shared address",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00265",
+    "b": "C03074",
+    "why": [
+     "10 invoices C00265\u2192C03074",
+     "shared address",
+     "shared phone"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K008",
+  "members": [
+   "C00149",
+   "C00303",
+   "C03437"
+  ],
+  "size": 3,
+  "mean_score": 0.7562746405001954,
+  "evidence": [
+   {
+    "a": "C00149",
+    "b": "C00303",
+    "why": [
+     "4 invoices C00303\u2192C00149",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00303",
+    "b": "C03437",
+    "why": [
+     "4 invoices C03437\u2192C00303",
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C00149",
+    "b": "C03437",
+    "why": [
+     "3 invoices C00149\u2192C03437",
+     "shared controller P00033",
+     "shared phone"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K009",
+  "members": [
+   "C00310",
+   "C00849"
+  ],
+  "size": 2,
+  "mean_score": 0.9612407596156849,
+  "evidence": [
+   {
+    "a": "C00310",
+    "b": "C00849",
+    "why": [
+     "7 invoices C00310\u2192C00849",
+     "shared controller P00081"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K010",
+  "members": [
+   "C01165",
+   "C01311"
+  ],
+  "size": 2,
+  "mean_score": 0.3482733758710874,
+  "evidence": [
+   {
+    "a": "C01165",
+    "b": "C01311",
+    "why": [
+     "12 invoices C01165\u2192C01311"
+    ]
+   }
+  ]
+ }
+]

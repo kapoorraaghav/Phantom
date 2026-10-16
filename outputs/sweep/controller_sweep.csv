@@ -1,0 +1,16 @@
+controller_obs_rate,variant,pr_auc,recall@2npos,ring_any@2npos
+0.0,fusion_full,0.583,0.557,0.556
+0.0,xgb_behaviour,0.606,0.638,1.0
+0.0,xgb_graph,0.338,0.466,0.667
+0.2,fusion_full,0.775,0.795,1.0
+0.2,xgb_behaviour,0.607,0.597,0.667
+0.2,xgb_graph,0.652,0.807,1.0
+0.5,fusion_full,0.589,0.658,0.889
+0.5,xgb_behaviour,0.546,0.539,0.556
+0.5,xgb_graph,0.537,0.645,1.0
+0.8,fusion_full,0.711,0.738,1.0
+0.8,xgb_behaviour,0.602,0.576,0.556
+0.8,xgb_graph,0.544,0.666,1.0
+1.0,fusion_full,0.927,0.958,1.0
+1.0,xgb_behaviour,0.562,0.598,0.778
+1.0,xgb_graph,0.956,1.0,1.0

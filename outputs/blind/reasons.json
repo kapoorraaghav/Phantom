@@ -1,0 +1,2340 @@
+{
+ "C01362": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 11 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 11.0
+   },
+   "support": [
+    "C01362 \u2192 C00227 \u2192 C02497 \u2192 C03199 \u2192 C01362",
+    "C01362 \u2192 C00227 \u2192 C02497 \u2192 C03503 \u2192 C01362",
+    "C01362 \u2192 C00227 \u2192 C03199 \u2192 C01362"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "37% of issued invoices are round-thousand amounts (population 98th percentile).",
+   "features": {
+    "round_share_out": 0.36764705882352944
+   },
+   "support": [
+    "INV0175301: 98,000 to C03199",
+    "INV0175305: 200,000 to C01871",
+    "INV0175307: 416,000 to C02725"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "76% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.7647058823529411
+   },
+   "support": [
+    "INV0175299: steel",
+    "INV0175300: devices",
+    "INV0175301: packaged_food"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00080 (OWNS, registry, conf 0.72) also linked to: C03018, C03199, C03483, C03503"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 55% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.5509792774769792
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 3.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00227, C03483, C03503"
+   ]
+  }
+ ],
+ "C03018": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 11 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 11.0
+   },
+   "support": [
+    "C03018 \u2192 C00227 \u2192 C02497 \u2192 C03018",
+    "C03018 \u2192 C00227 \u2192 C03199 \u2192 C02497 \u2192 C03018",
+    "C03018 \u2192 C00227 \u2192 C03199 \u2192 C03018"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "45% of issued invoices are round-thousand amounts (population 100th percentile).",
+   "features": {
+    "round_share_out": 0.44776119402985076
+   },
+   "support": [
+    "INV0129696: 22,000 to C02796",
+    "INV0129701: 10,000 to C00326",
+    "INV0175522: 307,000 to C03382"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "79% of issued invoices are for items outside the declared sector (food_processing).",
+   "features": {
+    "mismatch_share_out": 0.7910447761194029
+   },
+   "support": [
+    "INV0175521: contracting",
+    "INV0175522: pigments",
+    "INV0175523: steel"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00080 (DIRECTS, fuzzy_match, conf 0.88) also linked to: C01362, C03199, C03483, C03503",
+    "P04421 (OWNS, registry, conf 0.86) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 58% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.5771448928977686
+   },
+   "support": []
+  }
+ ],
+ "C03483": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 8 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 8.0
+   },
+   "support": [
+    "C03483 \u2192 C02497 \u2192 C03018 \u2192 C00227 \u2192 C03483",
+    "C03483 \u2192 C02497 \u2192 C03199 \u2192 C01362 \u2192 C03483",
+    "C03483 \u2192 C02497 \u2192 C03503 \u2192 C01362 \u2192 C03483"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "42% of issued invoices are round-thousand amounts (population 99th percentile).",
+   "features": {
+    "round_share_out": 0.4189189189189189
+   },
+   "support": [
+    "INV0150074: 24,000 to C00828",
+    "INV0150078: 38,000 to C01402",
+    "INV0150089: 196,000 to C01603"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "51% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.5135135135135135
+   },
+   "support": [
+    "INV0150095: packaged_food",
+    "INV0175479: formulations",
+    "INV0175480: components"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00080 (DIRECTS, registry, conf 0.96) also linked to: C01362, C03018, C03199, C03503"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 45% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.4515022140255969
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 3.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00227, C01362, C03503"
+   ]
+  }
+ ],
+ "C03503": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 9 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 9.0
+   },
+   "support": [
+    "C03503 \u2192 C01362 \u2192 C00227 \u2192 C02497 \u2192 C03503",
+    "C03503 \u2192 C01362 \u2192 C03199 \u2192 C02497 \u2192 C03503",
+    "C03503 \u2192 C01362 \u2192 C03199 \u2192 C03503"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "42% of issued invoices are round-thousand amounts (population 99th percentile).",
+   "features": {
+    "round_share_out": 0.42
+   },
+   "support": [
+    "INV0175356: 338,000 to C03483",
+    "INV0175359: 108,000 to C03386",
+    "INV0175361: 143,000 to C00227"
+   ]
+  },
+  {
+   "code": "PASS_THROUGH",
+   "text": "Outflow is 87% of inflow and funds leave a median 1.0 days after arriving.",
+   "features": {
+    "flow_balance": 0.8681810577659717,
+    "median_dwell_days": 1.0222885900899712
+   },
+   "support": [
+    "in TX0162176: 427,000",
+    "in TX0162180: 390,646",
+    "out TX0113880: 567,349",
+    "out TX0118909: 484,869"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "64% of issued invoices are for items outside the declared sector (construction).",
+   "features": {
+    "mismatch_share_out": 0.64
+   },
+   "support": [
+    "INV0175356: devices",
+    "INV0175357: spices",
+    "INV0175358: freight"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00080 (OWNS, registry, conf 0.78) also linked to: C01362, C03018, C03199, C03483"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 57% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.570456673548255
+   },
+   "support": []
+  }
+ ],
+ "C03199": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 12 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 12.0
+   },
+   "support": [
+    "C03199 \u2192 C00227 \u2192 C03483 \u2192 C03018 \u2192 C03199",
+    "C03199 \u2192 C00227 \u2192 C03483 \u2192 C03503 \u2192 C03199",
+    "C03199 \u2192 C00227 \u2192 C03503 \u2192 C03199"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "41% of issued invoices are round-thousand amounts (population 99th percentile).",
+   "features": {
+    "round_share_out": 0.4074074074074074
+   },
+   "support": [
+    "INV0137570: 8,000 to C00606",
+    "INV0175393: 125,000 to C02497",
+    "INV0175396: 67,000 to C03503"
+   ]
+  },
+  {
+   "code": "PASS_THROUGH",
+   "text": "Outflow is 97% of inflow and funds leave a median 1.1 days after arriving.",
+   "features": {
+    "flow_balance": 0.9711939198585219,
+    "median_dwell_days": 1.0553809532336231
+   },
+   "support": [
+    "in TX0162201: 526,000",
+    "in TX0162190: 371,364",
+    "out TX0094141: 454,039",
+    "out TX0162093: 423,715"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "67% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.6666666666666666
+   },
+   "support": [
+    "INV0175393: devices",
+    "INV0175395: yarn",
+    "INV0175396: cement"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00080 (OWNS, fuzzy_match, conf 0.85) also linked to: C01362, C03018, C03483, C03503"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 60% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.5965778803309457
+   },
+   "support": []
+  }
+ ],
+ "C02497": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 12 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 12.0
+   },
+   "support": [
+    "C02497 \u2192 C01362 \u2192 C03018 \u2192 C02497",
+    "C02497 \u2192 C01362 \u2192 C03503 \u2192 C02497",
+    "C02497 \u2192 C03018 \u2192 C00227 \u2192 C02497"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "32% of issued invoices are round-thousand amounts (population 96th percentile).",
+   "features": {
+    "round_share_out": 0.3150684931506849
+   },
+   "support": [
+    "INV0106705: 202,000 to C01926",
+    "INV0106714: 91,000 to C01097",
+    "INV0175437: 377,000 to C03483"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "51% of issued invoices are for items outside the declared sector (food_processing).",
+   "features": {
+    "mismatch_share_out": 0.5068493150684932
+   },
+   "support": [
+    "INV0175437: devices",
+    "INV0175439: yarn",
+    "INV0175440: plastics_resin"
+   ]
+  }
+ ],
+ "C00580": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "32% of issued invoices are round-thousand amounts (population 96th percentile).",
+   "features": {
+    "round_share_out": 0.32432432432432434
+   },
+   "support": [
+    "INV0025521: 22,000 to C02820",
+    "INV0025531: 52,000 to C02820",
+    "INV0175164: 397,000 to C03201"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "41% of issued invoices are for items outside the declared sector (pharma).",
+   "features": {
+    "mismatch_share_out": 0.40540540540540543
+   },
+   "support": [
+    "INV0025519: cement",
+    "INV0175164: steel",
+    "INV0175169: solvents"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 38% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.38134893217164834
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 2.0
+   },
+   "support": [
+    "same address as: C00084, C01470, C02222, C03201",
+    "same phone as: C00084, C03201"
+   ]
+  }
+ ],
+ "C00227": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 12 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 12.0
+   },
+   "support": [
+    "C00227 \u2192 C02497 \u2192 C03018 \u2192 C00227",
+    "C00227 \u2192 C02497 \u2192 C03199 \u2192 C01362 \u2192 C00227",
+    "C00227 \u2192 C02497 \u2192 C03503 \u2192 C01362 \u2192 C00227"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "53% of issued invoices are for items outside the declared sector (pharma).",
+   "features": {
+    "mismatch_share_out": 0.5285714285714286
+   },
+   "support": [
+    "INV0010015: dyes",
+    "INV0010019: software_dev",
+    "INV0175259: warehousing"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 60% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.5961280300591527
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 3.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01362, C03483, C03503"
+   ]
+  }
+ ],
+ "C03822": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "41% of issued invoices are for items outside the declared sector (pharma).",
+   "features": {
+    "mismatch_share_out": 0.40625
+   },
+   "support": [
+    "INV0163987: components",
+    "INV0174757: fabric",
+    "INV0174764: packaged_food"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00071 (OWNS, registry, conf 0.82) also linked to: C01770, C01800, C02913"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 49% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.4874151617538979
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same address as: C00049, C00951, C01770, C01800, C03803",
+    "same phone as: C00951, C01770, C03803"
+   ]
+  }
+ ],
+ "C01210": [
+  {
+   "code": "PASS_THROUGH",
+   "text": "Outflow is 90% of inflow and funds leave a median 2.7 days after arriving.",
+   "features": {
+    "flow_balance": 0.9000551362290495,
+    "median_dwell_days": 2.6918496112887595
+   },
+   "support": [
+    "in TX0161456: 467,000",
+    "in TX0161501: 381,000",
+    "out TX0161455: 449,000",
+    "out TX0161460: 388,000"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00069 (OWNS, registry, conf 0.81) also linked to: C02411, C03248",
+    "P01807 (DIRECTS, fuzzy_match, conf 0.77) also linked to: ",
+    "P01501 (DIRECTS, fuzzy_match, conf 0.65) also linked to: C00997"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 82% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.824348383308274
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same phone as: C00628, C02156, C03248"
+   ]
+  }
+ ],
+ "C03201": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "47% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.4666666666666667
+   },
+   "support": [
+    "INV0175165: freight",
+    "INV0175170: cement",
+    "INV0175175: courier"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 66% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.6603634698528473
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 2.0
+   },
+   "support": [
+    "same address as: C00084, C00580, C01470, C02222",
+    "same phone as: C00084, C00580"
+   ]
+  }
+ ],
+ "C01770": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00071 (OWNS, registry, conf 0.83) also linked to: C01800, C02913, C03822",
+    "P02608 (DIRECTS, fuzzy_match, conf 0.86) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 37% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.3736376649044939
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same address as: C00049, C00951, C01800, C03803, C03822",
+    "same phone as: C00951, C03803, C03822"
+   ]
+  }
+ ],
+ "C00951": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "54% of issued invoices are round-thousand amounts (population 100th percentile).",
+   "features": {
+    "round_share_out": 0.5384615384615384
+   },
+   "support": [
+    "INV0040760: 15,000 to C01795",
+    "INV0040766: 65,000 to C01184",
+    "INV0040768: 27,000 to C00142"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "46% of issued invoices are for items outside the declared sector (construction).",
+   "features": {
+    "mismatch_share_out": 0.46153846153846156
+   },
+   "support": [
+    "INV0174759: edible_oil",
+    "INV0174766: freight",
+    "INV0174773: apis"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 47% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.46698661930014473
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same address as: C00049, C01770, C01800, C03803, C03822",
+    "same phone as: C01770, C03803, C03822"
+   ]
+  }
+ ],
+ "C00628": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "31% of issued invoices are round-thousand amounts (population 96th percentile).",
+   "features": {
+    "round_share_out": 0.3055555555555556
+   },
+   "support": [
+    "INV0027342: 13,000 to C03913",
+    "INV0027345: 24,000 to C02705",
+    "INV0174654: 114,000 to C02156"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "31% of issued invoices are for items outside the declared sector (it_services).",
+   "features": {
+    "mismatch_share_out": 0.3055555555555556
+   },
+   "support": [
+    "INV0174654: packaging",
+    "INV0174659: dyes",
+    "INV0174664: packaged_food"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 37% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.37113907536759927
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same phone as: C01210, C02156, C03248"
+   ]
+  }
+ ],
+ "C01470": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "42% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.4166666666666667
+   },
+   "support": [
+    "INV0062676: cold_chain",
+    "INV0175167: devices",
+    "INV0175172: hosting"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 66% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.6639074365853751
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00084, C00580, C02222, C03201"
+   ]
+  }
+ ],
+ "C03803": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 22% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.21642324529712137
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same address as: C00049, C00951, C01770, C01800, C03822",
+    "same phone as: C00951, C01770, C03822"
+   ]
+  }
+ ],
+ "C02222": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "45% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.45454545454545453
+   },
+   "support": [
+    "INV0094917: components",
+    "INV0175163: software_dev",
+    "INV0175168: grain"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 73% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.7299756783609981
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00084, C00580, C01470, C03201"
+   ]
+  }
+ ],
+ "C02913": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "31% of issued invoices are for items outside the declared sector (construction).",
+   "features": {
+    "mismatch_share_out": 0.3076923076923077
+   },
+   "support": [
+    "INV0174753: warehousing",
+    "INV0174760: yarn",
+    "INV0174767: edible_oil"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00071 (OWNS, registry, conf 0.77) also linked to: C01770, C01800, C03822",
+    "P04267 (DIRECTS, fuzzy_match, conf 0.64) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 30% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.3023412789987446
+   },
+   "support": []
+  }
+ ],
+ "C00084": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 36% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.3610601696410645
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 2.0
+   },
+   "support": [
+    "same address as: C00580, C01470, C02222, C03201",
+    "same phone as: C00580, C03201"
+   ]
+  }
+ ],
+ "C02347": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "33% of issued invoices are for items outside the declared sector (logistics).",
+   "features": {
+    "mismatch_share_out": 0.3333333333333333
+   },
+   "support": [
+    "INV0174530: plastics_resin",
+    "INV0174538: pcb",
+    "INV0174546: spices"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 23% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.23029658554516144
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00341, C00514, C02766, C03368, C03836"
+   ]
+  }
+ ],
+ "C02766": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "36% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.36363636363636365
+   },
+   "support": [
+    "INV0174535: freight",
+    "INV0174543: components",
+    "INV0174551: yarn"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 78% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.7819837578517252
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00341, C00514, C02347, C03368, C03836"
+   ]
+  }
+ ],
+ "C03876": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "41% of issued invoices are round-thousand amounts (population 99th percentile).",
+   "features": {
+    "round_share_out": 0.4107142857142857
+   },
+   "support": [
+    "INV0166705: 7,000 to C03798",
+    "INV0166708: 64,000 to C02491",
+    "INV0166709: 381,000 to C02491"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 8 other companies and 51% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 9.0,
+    "idcluster_internal_share": 0.5147672633561774
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00156, C00322, C00978, C01079, C03354"
+   ]
+  }
+ ],
+ "C00720": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C00720 \u2192 C02908 \u2192 C02906 \u2192 C03652 \u2192 C00720"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 59% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.5920781549887006
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same phone as: C03652"
+   ]
+  }
+ ],
+ "C02411": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "33% of issued invoices are round-thousand amounts (population 97th percentile).",
+   "features": {
+    "round_share_out": 0.3333333333333333
+   },
+   "support": [
+    "INV0102870: 28,000 to C02623",
+    "INV0174651: 110,000 to C01210",
+    "INV0174656: 449,000 to C01210"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "41% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.4074074074074074
+   },
+   "support": [
+    "INV0174651: hosting",
+    "INV0174656: support",
+    "INV0174661: devices"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00069 (DIRECTS, registry, conf 0.87) also linked to: C01210, C03248",
+    "P03544 (OWNS, registry, conf 0.78) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 25% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.2519701052743111
+   },
+   "support": []
+  }
+ ],
+ "C01800": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00071 (OWNS, registry, conf 0.80) also linked to: C01770, C02913, C03822"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 63% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.6321723482521248
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00049, C00951, C01770, C03803, C03822"
+   ]
+  }
+ ],
+ "C02906": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C02906 \u2192 C03652 \u2192 C00720 \u2192 C02908 \u2192 C02906"
+   ]
+  },
+  {
+   "code": "ROUND_VALUES",
+   "text": "32% of issued invoices are round-thousand amounts (population 96th percentile).",
+   "features": {
+    "round_share_out": 0.32075471698113206
+   },
+   "support": [
+    "INV0124839: 49,000 to C02925",
+    "INV0124842: 65,000 to C01439",
+    "INV0124845: 22,000 to C02925"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00075 (OWNS, registry, conf 0.73) also linked to: C02908, C03652",
+    "P04258 (DIRECTS, registry, conf 0.92) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 44% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.44214932119589173
+   },
+   "support": []
+  }
+ ],
+ "C03368": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00341, C00514, C02347, C02766, C03836"
+   ]
+  }
+ ],
+ "C02156": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "32% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.3235294117647059
+   },
+   "support": [
+    "INV0174650: solvents",
+    "INV0174655: software_dev",
+    "INV0174660: plastics_resin"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 55% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.5481418307542976
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same phone as: C00628, C01210, C03248"
+   ]
+  }
+ ],
+ "C03479": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00074 (OWNS, registry, conf 0.97) also linked to: C01482, C03657"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 2 other companies and 32% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 3.0,
+    "idcluster_internal_share": 0.31825615361795156
+   },
+   "support": []
+  }
+ ],
+ "C03657": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "33% of issued invoices are for items outside the declared sector (logistics).",
+   "features": {
+    "mismatch_share_out": 0.3333333333333333
+   },
+   "support": [
+    "INV0174979: garments",
+    "INV0174984: contracting",
+    "INV0174989: steel"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00074 (OWNS, fuzzy_match, conf 0.53) also linked to: C01482, C03479",
+    "P05341 (DIRECTS, registry, conf 0.75) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 2 other companies and 70% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 3.0,
+    "idcluster_internal_share": 0.697486910075552
+   },
+   "support": []
+  }
+ ],
+ "C00514": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "36% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.36363636363636365
+   },
+   "support": [
+    "INV0174532: dyes",
+    "INV0174540: software_dev",
+    "INV0174548: consulting"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 39% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.3851814233868969
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00341, C02347, C02766, C03368, C03836"
+   ]
+  }
+ ],
+ "C00624": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "36% of issued invoices are for items outside the declared sector (electronics).",
+   "features": {
+    "mismatch_share_out": 0.36
+   },
+   "support": [
+    "INV0175604: lab_supplies",
+    "INV0175612: courier",
+    "INV0175620: consulting"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00082 (OWNS, registry, conf 0.75) also linked to: C00162, C00326, C01752, C02144",
+    "P00975 (DIRECTS, registry, conf 0.97) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 4 other companies and 24% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 5.0,
+    "idcluster_internal_share": 0.24409132913158438
+   },
+   "support": []
+  }
+ ],
+ "C00326": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00082 (OWNS, fuzzy_match, conf 0.73) also linked to: C00162, C00624, C01752, C02144",
+    "P00561 (DIRECTS, fuzzy_match, conf 0.58) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 4 other companies and 21% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 5.0,
+    "idcluster_internal_share": 0.2135788458688467
+   },
+   "support": []
+  }
+ ],
+ "C01752": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "45% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.45
+   },
+   "support": [
+    "INV0175597: cold_chain",
+    "INV0175605: fabric",
+    "INV0175613: warehousing"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00082 (OWNS, fuzzy_match, conf 0.46) also linked to: C00162, C00326, C00624, C02144"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 4 other companies and 88% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 5.0,
+    "idcluster_internal_share": 0.8758823516783483
+   },
+   "support": []
+  }
+ ],
+ "C02908": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C02908 \u2192 C02906 \u2192 C03652 \u2192 C00720 \u2192 C02908"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00075 (DIRECTS, fuzzy_match, conf 0.53) also linked to: C02906, C03652",
+    "P04261 (OWNS, registry, conf 0.98) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 36% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.35980415652933817
+   },
+   "support": []
+  }
+ ],
+ "C00049": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "31% of issued invoices are for items outside the declared sector (logistics).",
+   "features": {
+    "mismatch_share_out": 0.30952380952380953
+   },
+   "support": [
+    "INV0002478: cables",
+    "INV0174755: steel",
+    "INV0174762: devices"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 6 other companies and 77% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 7.0,
+    "idcluster_internal_share": 0.7687732265573197
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00951, C01770, C01800, C03803, C03822"
+   ]
+  }
+ ],
+ "C02269": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00076 (OWNS, registry, conf 0.88) also linked to: C02171, C02701, C00058",
+    "P03329 (DIRECTS, registry, conf 0.75) also linked to: "
+   ]
+  }
+ ],
+ "C01482": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "42% of issued invoices are for items outside the declared sector (textiles).",
+   "features": {
+    "mismatch_share_out": 0.4166666666666667
+   },
+   "support": [
+    "INV0063231: pigments",
+    "INV0174978: pcb",
+    "INV0174983: grain"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00074 (OWNS, fuzzy_match, conf 0.86) also linked to: C03479, C03657"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 2 other companies and 41% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 3.0,
+    "idcluster_internal_share": 0.4148328078441054
+   },
+   "support": []
+  }
+ ],
+ "C03652": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C03652 \u2192 C00720 \u2192 C02908 \u2192 C02906 \u2192 C03652"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00075 (OWNS, fuzzy_match, conf 0.90) also linked to: C02906, C02908"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 31% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.3071662470824556
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same phone as: C00720"
+   ]
+  }
+ ],
+ "C02171": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00076 (DIRECTS, fuzzy_match, conf 0.90) also linked to: C02269, C02701, C00058"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 23% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.22815895218001864
+   },
+   "support": []
+  }
+ ],
+ "C02993": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "46% of issued invoices are round-thousand amounts (population 100th percentile).",
+   "features": {
+    "round_share_out": 0.463768115942029
+   },
+   "support": [
+    "INV0128544: 14,000 to C01707",
+    "INV0128545: 107,000 to C01707",
+    "INV0128547: 50,000 to C02933"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00073 (OWNS, fuzzy_match, conf 0.80) also linked to: C01291, C03396, C03634"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01291, C01907, C02817, C03396"
+   ]
+  }
+ ],
+ "C01291": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "33% of issued invoices are round-thousand amounts (population 97th percentile).",
+   "features": {
+    "round_share_out": 0.3333333333333333
+   },
+   "support": [
+    "INV0174878: 263,000 to C02177",
+    "INV0174885: 591,000 to C02177",
+    "INV0174899: 377,000 to C02177"
+   ]
+  },
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "42% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.4166666666666667
+   },
+   "support": [
+    "INV0055027: consulting",
+    "INV0174878: components",
+    "INV0174885: edible_oil"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00073 (DIRECTS, fuzzy_match, conf 0.60) also linked to: C02993, C03396, C03634",
+    "P01917 (OWNS, registry, conf 0.74) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01907, C02817, C02993, C03396"
+   ]
+  }
+ ],
+ "C02892": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 2.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01222, C02149"
+   ]
+  }
+ ],
+ "C02149": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00077 (DIRECTS, registry, conf 0.86) also linked to: C01222, C01469",
+    "P03945 (DIRECTS, self_declared, conf 0.55) also linked to: ",
+    "P03292 (DIRECTS, fuzzy_match, conf 0.71) also linked to: C02243, C02243"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 2.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01222, C02892"
+   ]
+  }
+ ],
+ "C03248": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00069 (OWNS, registry, conf 0.77) also linked to: C01210, C02411",
+    "P04750 (DIRECTS, fuzzy_match, conf 0.59) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 29% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.29479628734641977
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same phone as: C00628, C01210, C02156"
+   ]
+  }
+ ],
+ "C02817": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01291, C01907, C02993, C03396"
+   ]
+  }
+ ],
+ "C03396": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "34% of issued invoices are for items outside the declared sector (logistics).",
+   "features": {
+    "mismatch_share_out": 0.34146341463414637
+   },
+   "support": [
+    "INV0174883: packaged_food",
+    "INV0174890: garments",
+    "INV0174897: solvents"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00073 (OWNS, fuzzy_match, conf 0.71) also linked to: C01291, C02993, C03634",
+    "P04958 (DIRECTS, fuzzy_match, conf 0.84) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01291, C01907, C02817, C02993"
+   ]
+  }
+ ],
+ "C03860": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "39% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.3888888888888889
+   },
+   "support": [
+    "INV0166007: spices",
+    "INV0166028: steel",
+    "INV0174529: packaged_food"
+   ]
+  }
+ ],
+ "C03836": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00341, C00514, C02347, C02766, C03368"
+   ]
+  }
+ ],
+ "C00341": [
+  {
+   "code": "PASS_THROUGH",
+   "text": "Outflow is 85% of inflow and funds leave a median 2.4 days after arriving.",
+   "features": {
+    "flow_balance": 0.8519080167542769,
+    "median_dwell_days": 2.350498300661485
+   },
+   "support": [
+    "in TX0013916: 691,727",
+    "in TX0013941: 683,480",
+    "out TX0016855: 3,819,021",
+    "out TX0016809: 2,372,661"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same phone as: C00514, C02347, C02766, C03368, C03836"
+   ]
+  }
+ ],
+ "C00322": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "35% of issued invoices are round-thousand amounts (population 97th percentile).",
+   "features": {
+    "round_share_out": 0.34782608695652173
+   },
+   "support": [
+    "INV0014102: 51,000 to C02968",
+    "INV0014106: 8,000 to C02968",
+    "INV0014107: 179,000 to C00100"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00079 (OWNS, registry, conf 0.88) also linked to: C00978, C01079, C02592, C03354"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 8 other companies and 38% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 9.0,
+    "idcluster_internal_share": 0.38435325568089473
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00156, C00978, C01079, C03354, C03876"
+   ]
+  }
+ ],
+ "C01907": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01291, C02817, C02993, C03396"
+   ]
+  }
+ ],
+ "C03354": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00079 (OWNS, registry, conf 0.91) also linked to: C00322, C00978, C01079, C02592",
+    "P04859 (OWNS, fuzzy_match, conf 0.60) also linked to: C03326, C03628"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00156, C00322, C00978, C01079, C03876"
+   ]
+  }
+ ],
+ "C03634": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00073 (OWNS, fuzzy_match, conf 0.89) also linked to: C01291, C02993, C03396",
+    "P05305 (DIRECTS, registry, conf 0.98) also linked to: "
+   ]
+  }
+ ],
+ "C02097": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "35% of issued invoices are round-thousand amounts (population 97th percentile).",
+   "features": {
+    "round_share_out": 0.34615384615384615
+   },
+   "support": [
+    "INV0089422: 17,000 to C01826",
+    "INV0089423: 24,000 to C02931",
+    "INV0089424: 6,000 to C02818"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00068 (OWNS, fuzzy_match, conf 0.85) also linked to: C00551, C00791, C01670"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 21% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.21022355286729807
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00551, C00633, C00791, C02417"
+   ]
+  }
+ ],
+ "C01450": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "36% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.35714285714285715
+   },
+   "support": [
+    "INV0061973: cold_chain",
+    "INV0175603: yarn",
+    "INV0175611: edible_oil"
+   ]
+  }
+ ],
+ "C00791": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00068 (DIRECTS, fuzzy_match, conf 0.74) also linked to: C00551, C02097, C01670",
+    "P01205 (OWNS, registry, conf 0.83) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00551, C00633, C02097, C02417"
+   ]
+  }
+ ],
+ "C03617": [],
+ "C00551": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00068 (OWNS, registry, conf 0.79) also linked to: C00791, C02097, C01670",
+    "P00873 (DIRECTS, registry, conf 0.77) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00633, C00791, C02097, C02417"
+   ]
+  }
+ ],
+ "C02143": [],
+ "C02455": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "40% of issued invoices are round-thousand amounts (population 99th percentile).",
+   "features": {
+    "round_share_out": 0.39655172413793105
+   },
+   "support": [
+    "INV0104947: 116,000 to C02400",
+    "INV0104953: 102,000 to C01087",
+    "INV0104954: 255,000 to C01087"
+   ]
+  }
+ ],
+ "C03211": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00053 (OWNS, registry, conf 0.91) also linked to: C03592, C01324",
+    "P00053 (DIRECTS, fuzzy_match, conf 0.48) also linked to: C03592, C01324",
+    "P01588 (DIRECTS, fuzzy_match, conf 0.64) also linked to: C01060"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 48% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.4763648276158395
+   },
+   "support": []
+  }
+ ],
+ "C02512": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "37% of issued invoices are for items outside the declared sector (chemicals).",
+   "features": {
+    "mismatch_share_out": 0.36585365853658536
+   },
+   "support": [
+    "INV0107394: components",
+    "INV0174977: warehousing",
+    "INV0174982: packaging"
+   ]
+  }
+ ],
+ "C03215": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 15.0,
+    "contact_group_size": 5.0
+   },
+   "support": [
+    "same address as: C00073, C00081, C00446, C00675, C01108, C01777, C02266, C02362",
+    "same phone as: C01108, C02362, C02643, C03711, C03932"
+   ]
+  }
+ ],
+ "C02498": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same phone as: C01146, C02301, C03753"
+   ]
+  }
+ ],
+ "C02410": [
+  {
+   "code": "SECTOR_MISMATCH",
+   "text": "42% of issued invoices are for items outside the declared sector (electronics).",
+   "features": {
+    "mismatch_share_out": 0.4166666666666667
+   },
+   "support": [
+    "INV0102853: hosting",
+    "INV0175601: steel",
+    "INV0175609: edible_oil"
+   ]
+  }
+ ],
+ "C02581": [],
+ "C00633": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00551, C00791, C02097, C02417"
+   ]
+  }
+ ],
+ "C03185": [],
+ "C03544": [],
+ "C00597": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 6 companies.",
+   "features": {
+    "ctrl_max_reach": 6.0
+   },
+   "support": [
+    "P00072 (OWNS, registry, conf 0.80) also linked to: C00877, C02054, C02182, C03045, C03381",
+    "P03283 (OWNS, fuzzy_match, conf 0.46) also linked to: C02236, C02236"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 7 other companies and 31% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 8.0,
+    "idcluster_internal_share": 0.30643492593583754
+   },
+   "support": []
+  }
+ ],
+ "C03237": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "35% of issued invoices are round-thousand amounts (population 97th percentile).",
+   "features": {
+    "round_share_out": 0.3508771929824561
+   },
+   "support": [
+    "INV0139168: 73,000 to C01385",
+    "INV0139169: 42,000 to C01385",
+    "INV0139173: 74,000 to C01385"
+   ]
+  }
+ ],
+ "C00244": [],
+ "C00162": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00082 (OWNS, registry, conf 0.82) also linked to: C00326, C00624, C01752, C02144"
+   ]
+  }
+ ],
+ "C00813": [
+  {
+   "code": "ROUND_VALUES",
+   "text": "58% of issued invoices are round-thousand amounts (population 100th percentile).",
+   "features": {
+    "round_share_out": 0.5789473684210527
+   },
+   "support": [
+    "INV0034658: 26,000 to C02704",
+    "INV0034659: 22,000 to C02469",
+    "INV0034660: 8,000 to C03455"
+   ]
+  }
+ ],
+ "C03471": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P01951 (OWNS, fuzzy_match, conf 0.63) also linked to: C01316, C00240"
+   ]
+  }
+ ],
+ "C00435": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00070 (OWNS, fuzzy_match, conf 0.66) also linked to: C01721, C03149, C02976"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C01719, C01721, C02184, C02338"
+   ]
+  }
+ ],
+ "C02177": [],
+ "C02685": [],
+ "C03904": [],
+ "C02417": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00551, C00633, C00791, C02097"
+   ]
+  }
+ ],
+ "C01222": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00077 (DIRECTS, registry, conf 0.73) also linked to: C01469, C02149"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 2.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C02149, C02892"
+   ]
+  }
+ ],
+ "C03984": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C03562"
+   ]
+  }
+ ],
+ "C00156": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 8 other companies and 30% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 9.0,
+    "idcluster_internal_share": 0.30285563348540373
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 5.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00322, C00978, C01079, C03354, C03876"
+   ]
+  }
+ ],
+ "C00877": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 6 companies.",
+   "features": {
+    "ctrl_max_reach": 6.0
+   },
+   "support": [
+    "P00072 (OWNS, registry, conf 0.94) also linked to: C00597, C02054, C02182, C03045, C03381",
+    "P01332 (DIRECTS, fuzzy_match, conf 0.57) also linked to: "
+   ]
+  }
+ ],
+ "C00256": [],
+ "C02953": [],
+ "C03381": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 6 companies.",
+   "features": {
+    "ctrl_max_reach": 6.0
+   },
+   "support": [
+    "P00072 (OWNS, fuzzy_match, conf 0.61) also linked to: C00597, C00877, C02054, C02182, C03045"
+   ]
+  }
+ ],
+ "C02701": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 4 companies.",
+   "features": {
+    "ctrl_max_reach": 4.0
+   },
+   "support": [
+    "P00076 (OWNS, fuzzy_match, conf 0.46) also linked to: C02171, C02269, C00058",
+    "P03961 (DIRECTS, fuzzy_match, conf 0.84) also linked to: "
+   ]
+  }
+ ],
+ "C00661": [],
+ "C03513": [],
+ "C00821": [],
+ "C01052": [],
+ "C01471": [],
+ "C03141": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 20.0,
+    "contact_group_size": 8.0
+   },
+   "support": [
+    "same address as: C00004, C00040, C00041, C00136, C00279, C00472, C00492, C00717",
+    "same phone as: C00136, C00279, C00472, C00786, C01301, C01541, C01884, C03065"
+   ]
+  }
+ ],
+ "C02338": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C00435, C01719, C01721, C02184"
+   ]
+  }
+ ],
+ "C02652": []
+}

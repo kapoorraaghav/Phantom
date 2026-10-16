@@ -1,0 +1,40 @@
+{
+  "config": {
+    "seed": 42,
+    "n_companies": 4000,
+    "horizon_days": 365,
+    "ring_fraction": 0.025,
+    "ring_size": [
+      4,
+      8
+    ],
+    "typology_probs": [
+      0.3,
+      0.25,
+      0.2,
+      0.25
+    ],
+    "controller_obs_rate": 0.5,
+    "controller_noise_rate": 0.15,
+    "benign_group_fraction": 0.05,
+    "coworking_sites": 8,
+    "coworking_size": [
+      15,
+      35
+    ],
+    "ring_shared_address_p": 0.5,
+    "ring_shared_contact_p": 0.4,
+    "near_duplicate_address_p": 0.03,
+    "ring_intensity": 1.0
+  },
+  "n_rings": 17,
+  "n_ring_members": 104,
+  "prevalence": 0.026,
+  "typology_counts": {
+    "camouflaged": 5,
+    "dormant_spike": 5,
+    "passthrough": 4,
+    "circular": 3
+  },
+  "synthetic": true
+}

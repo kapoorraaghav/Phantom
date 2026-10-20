@@ -1,0 +1,551 @@
+{
+ "C000967": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00051 (OWNS, registry, conf 0.99) also linked to: C000603, C001608, C001987, C005674",
+    "P01497 (DIRECTS, registry, conf 0.97) also linked to: "
+   ]
+  }
+ ],
+ "C002930": [],
+ "C005396": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 16 companies.",
+   "features": {
+    "ctrl_max_reach": 16.0
+   },
+   "support": [
+    "P00060 (DIRECTS, fuzzy_match, conf 0.55) also linked to: C000898, C000956, C001238, C001734, C002588, C003056",
+    "P08076 (OWNS, fuzzy_match, conf 0.84) also linked to: "
+   ]
+  }
+ ],
+ "C001386": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 96% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.9591505834612688
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same phone as: C006772"
+   ]
+  }
+ ],
+ "C003056": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 16 companies.",
+   "features": {
+    "ctrl_max_reach": 16.0
+   },
+   "support": [
+    "P00060 (OWNS, registry, conf 0.88) also linked to: C000898, C000956, C001238, C001734, C002588, C004472",
+    "P04572 (DIRECTS, fuzzy_match, conf 0.68) also linked to: "
+   ]
+  }
+ ],
+ "C003845": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (OWNS, registry, conf 0.76) also linked to: C000115, C000997, C001374, C003711, C004689, C006626",
+    "P00972 (OWNS, fuzzy_match, conf 0.58) also linked to: C000616"
+   ]
+  }
+ ],
+ "C005674": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00051 (DIRECTS, registry, conf 0.94) also linked to: C000603, C000967, C001608, C001987"
+   ]
+  }
+ ],
+ "C006626": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (DIRECTS, registry, conf 0.80) also linked to: C000115, C000997, C001374, C003711, C003845, C004689",
+    "P09921 (OWNS, registry, conf 0.85) also linked to: "
+   ]
+  }
+ ],
+ "C001374": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (DIRECTS, registry, conf 0.71) also linked to: C000115, C000997, C003711, C003845, C004689, C006626",
+    "P02090 (OWNS, registry, conf 0.92) also linked to: "
+   ]
+  }
+ ],
+ "C000997": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (DIRECTS, fuzzy_match, conf 0.65) also linked to: C000115, C001374, C003711, C003845, C004689, C006626",
+    "P01541 (OWNS, registry, conf 0.70) also linked to: "
+   ]
+  }
+ ],
+ "C007509": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C007509 \u2192 C001772 \u2192 C006742 \u2192 C007509"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00052 (DIRECTS, fuzzy_match, conf 0.55) also linked to: C001772, C006742",
+    "P11225 (OWNS, registry, conf 0.85) also linked to: ",
+    "P13969 (OWNS, fuzzy_match, conf 0.51) also linked to: "
+   ]
+  }
+ ],
+ "C001987": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 5 companies.",
+   "features": {
+    "ctrl_max_reach": 5.0
+   },
+   "support": [
+    "P00051 (DIRECTS, registry, conf 0.89) also linked to: C000603, C000967, C001608, C005674"
+   ]
+  }
+ ],
+ "C006198": [],
+ "C002429": [],
+ "C002139": [],
+ "C008616": [],
+ "C008432": [],
+ "C004389": [],
+ "C003861": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00017 (OWNS, fuzzy_match, conf 0.73) also linked to: ",
+    "P13337 (OWNS, fuzzy_match, conf 0.64) also linked to: C008913, C000025"
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 3.0,
+    "contact_group_size": 3.0
+   },
+   "support": [
+    "same address as: C005624, C007707, C008519",
+    "same phone as: C005624, C007707, C008519"
+   ]
+  }
+ ],
+ "C001734": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 16 companies.",
+   "features": {
+    "ctrl_max_reach": 16.0
+   },
+   "support": [
+    "P00060 (OWNS, registry, conf 0.76) also linked to: C000898, C000956, C001238, C002588, C003056, C004472"
+   ]
+  }
+ ],
+ "C005809": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C000496, C001614, C004256, C006223"
+   ]
+  }
+ ],
+ "C006742": [
+  {
+   "code": "TIGHT_CYCLE",
+   "text": "Sits on 1 circular invoice flow(s) of length 3-4 with near-identical amounts.",
+   "features": {
+    "tight_cycles": 1.0
+   },
+   "support": [
+    "C006742 \u2192 C007509 \u2192 C001772 \u2192 C006742"
+   ]
+  },
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00052 (OWNS, fuzzy_match, conf 0.68) also linked to: C001772, C007509",
+    "P10084 (DIRECTS, registry, conf 0.98) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C001772"
+   ]
+  }
+ ],
+ "C008510": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00056 (OWNS, registry, conf 0.89) also linked to: C006499, C006658"
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 90% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.8972704259596606
+   },
+   "support": []
+  }
+ ],
+ "C003577": [],
+ "C007569": [],
+ "C006630": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (OWNS, fuzzy_match, conf 0.54) also linked to: C000115, C000997, C001374, C003711, C003845, C004689"
+   ]
+  }
+ ],
+ "C002810": [],
+ "C003734": [],
+ "C000996": [],
+ "C005271": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 16 companies.",
+   "features": {
+    "ctrl_max_reach": 16.0
+   },
+   "support": [
+    "P00060 (DIRECTS, registry, conf 0.84) also linked to: C000898, C000956, C001238, C001734, C002588, C003056",
+    "P07900 (OWNS, fuzzy_match, conf 0.48) also linked to: "
+   ]
+  }
+ ],
+ "C004689": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 9 companies.",
+   "features": {
+    "ctrl_max_reach": 9.0
+   },
+   "support": [
+    "P00059 (OWNS, registry, conf 0.88) also linked to: C000115, C000997, C001374, C003711, C003845, C006626",
+    "P07023 (DIRECTS, registry, conf 0.92) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 10 other companies and 93% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 11.0,
+    "idcluster_internal_share": 0.9340431681871524
+   },
+   "support": []
+  }
+ ],
+ "C006493": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 74% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.7384405470378772
+   },
+   "support": []
+  }
+ ],
+ "C007559": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 16 companies.",
+   "features": {
+    "ctrl_max_reach": 16.0
+   },
+   "support": [
+    "P00060 (DIRECTS, registry, conf 0.71) also linked to: C000898, C000956, C001238, C001734, C002588, C003056"
+   ]
+  }
+ ],
+ "C008629": [],
+ "C005930": [],
+ "C003359": [],
+ "C004256": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00050 (OWNS, registry, conf 0.76) also linked to: C001614, C003405",
+    "P06379 (DIRECTS, registry, conf 0.91) also linked to: "
+   ]
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C000496, C001614, C005809, C006223"
+   ]
+  }
+ ],
+ "C007027": [],
+ "C001614": [
+  {
+   "code": "SHARED_CONTROLLER",
+   "text": "An observed controller is linked to 3 companies.",
+   "features": {
+    "ctrl_max_reach": 3.0
+   },
+   "support": [
+    "P00050 (OWNS, registry, conf 0.93) also linked to: C003405, C004256",
+    "P02446 (DIRECTS, registry, conf 0.99) also linked to: "
+   ]
+  },
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 5 other companies and 30% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 6.0,
+    "idcluster_internal_share": 0.2950508473931649
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 4.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C000496, C004256, C005809, C006223"
+   ]
+  }
+ ],
+ "C004170": [],
+ "C007991": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same address as: C004146",
+    "same phone as: C004146"
+   ]
+  }
+ ],
+ "C001367": [],
+ "C002801": [],
+ "C006772": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 25% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.24546544531045586
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 0.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same phone as: C001386"
+   ]
+  }
+ ],
+ "C002885": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C009263"
+   ]
+  }
+ ],
+ "C003026": [],
+ "C004232": [],
+ "C005662": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 2.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C002181, C008855"
+   ]
+  }
+ ],
+ "C007185": [],
+ "C005872": [],
+ "C003901": [],
+ "C003693": [],
+ "C004146": [
+  {
+   "code": "INSULAR_CLUSTER",
+   "text": "Linked by shared identifiers to 3 other companies and 61% of its invoice value stays inside that cluster.",
+   "features": {
+    "idcluster_size": 4.0,
+    "idcluster_internal_share": 0.606408004022047
+   },
+   "support": []
+  },
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 1.0
+   },
+   "support": [
+    "same address as: C007991",
+    "same phone as: C007991"
+   ]
+  }
+ ],
+ "C007554": [],
+ "C000719": [],
+ "C004511": [],
+ "C008596": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 19.0,
+    "contact_group_size": 9.0
+   },
+   "support": [
+    "same address as: C001682, C002737, C003130, C003245, C003423, C004034, C004240, C004333",
+    "same phone as: C003130, C003423, C004034, C004333, C007195, C007252, C009213, C009421"
+   ]
+  }
+ ],
+ "C004467": [],
+ "C000544": [],
+ "C003129": [],
+ "C000665": [
+  {
+   "code": "SHARED_IDENTIFIER",
+   "text": "Shares a registered address and/or phone number with other companies.",
+   "features": {
+    "addr_group_size": 1.0,
+    "contact_group_size": 0.0
+   },
+   "support": [
+    "same address as: C003567"
+   ]
+  }
+ ],
+ "C004830": [],
+ "C005948": [],
+ "C003141": [],
+ "C005048": [],
+ "C002136": [],
+ "C006121": [],
+ "C003150": [],
+ "C003860": [],
+ "C001654": [],
+ "C002042": [],
+ "C005968": [],
+ "C006248": [],
+ "C000102": []
+}

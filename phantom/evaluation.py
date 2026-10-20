@@ -4,13 +4,22 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score
-from .config import GenConfig, TYPOLOGIES
+from .config import GenConfig
 from .features import build_features
 from .generator import generate
 from .models import PhantomModel
 
 VARIANTS = ["rules", "if_behaviour", "xgb_behaviour", "xgb_graph", "fusion_behaviour",
             "fusion_graph", "fusion_full", "fusion_full_uncalibrated"]
+
+
+def eval_gt(ds):
+    """Ground truth restricted to entities that are evaluated (all of them for the pure-synthetic
+    data; only the sampled 'seed' accounts for AML-Data, whose fringe accounts give graph context)."""
+    gt = ds.ground_truth
+    if "in_eval" in gt.columns:
+        gt = gt[gt.in_eval.astype(bool)]
+    return gt.reset_index(drop=True)
 
 
 def group_ids(gt: pd.DataFrame) -> pd.Series:
@@ -74,8 +83,8 @@ def _run(F_tr, y_tr, g_tr, F_te, y_te, ring_te, seed):
 def run_experiments(ds, out_dir, n_repeats=5, seed=0, log=print):
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    gt = ds.ground_truth
-    idx = gt.entity_id.to_numpy()
+    gt = eval_gt(ds)
+    ids = gt.entity_id.to_numpy()
     y = gt.synthetic_label.to_numpy()
     ring = gt.ring_id.to_numpy(dtype=object)
     groups = group_ids(gt).to_numpy()
@@ -86,11 +95,13 @@ def run_experiments(ds, out_dir, n_repeats=5, seed=0, log=print):
         for v, m in res.items():
             rows.append(dict(setting=setting, variant=v, repeat=rep, **m))
 
-    log("features: full window"); F = build_features(ds)
-    log("features: no controller edges"); F_nc = build_features(ds, use_controller_edges=False)
-    log("features: with proposed (fuzzy) links merged"); F_fz = build_features(ds, include_proposed=True)
+    log("features: full window"); F = build_features(ds).loc[ids]
+    log("features: no controller edges"); F_nc = build_features(ds, use_controller_edges=False).loc[ids]
+    log("features: with proposed (fuzzy) links merged"); F_fz = build_features(ds, include_proposed=True).loc[ids]
+    log("features: transfers only (no controller, address or phone links)")
+    F_io = build_features(ds, use_controller_edges=False, use_contact_links=False).loc[ids]
     log("features: temporal windows")
-    F_w1 = build_features(ds, 0, H // 2); F_w2 = build_features(ds, H // 2, H)
+    F_w1 = build_features(ds, 0, H // 2).loc[ids]; F_w2 = build_features(ds, H // 2, H).loc[ids]
 
     for rep in range(n_repeats):
         s = seed + rep
@@ -98,6 +109,8 @@ def run_experiments(ds, out_dir, n_repeats=5, seed=0, log=print):
         log(f"repeat {rep}: grouped split train={len(tr)} test={len(te)} test_pos={y[te].sum()}")
         add("ring_grouped (headline)", _run(F.iloc[tr], y[tr], groups[tr], F.iloc[te], y[te], ring[te], s), rep)
         add("ring_grouped, no controller edges", _run(F_nc.iloc[tr], y[tr], groups[tr], F_nc.iloc[te], y[te], ring[te], s), rep)
+        add("ring_grouped, TRANSFERS ONLY (no controller/address/phone links)",
+            _run(F_io.iloc[tr], y[tr], groups[tr], F_io.iloc[te], y[te], ring[te], s), rep)
         add("ring_grouped, fuzzy links merged", _run(F_fz.iloc[tr], y[tr], groups[tr], F_fz.iloc[te], y[te], ring[te], s), rep)
         add("temporal+grouped (train early window, test late window)",
             _run(F_w1.iloc[tr], y[tr], groups[tr], F_w2.iloc[te], y[te], ring[te], s), rep)
@@ -112,9 +125,8 @@ def run_experiments(ds, out_dir, n_repeats=5, seed=0, log=print):
     # hold out each typology
     typ = gt.typology.to_numpy()
     rng = np.random.default_rng(seed)
-    for t in TYPOLOGIES:
-        if (typ == t).sum() == 0:
-            continue
+    ring_ct = gt[gt.ring_id.notna()].groupby("typology").ring_id.nunique()
+    for t in sorted(ring_ct[ring_ct >= 2].index):      # need >= 2 rings of a type to hold it out meaningfully
         te_mask = (typ == t) | ((typ == "none") & (rng.random(len(y)) < 0.3))
         # keep benign multi-company owners together
         te_groups = set(groups[te_mask & (typ != "none")])

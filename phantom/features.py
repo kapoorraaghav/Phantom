@@ -42,22 +42,43 @@ class _UF:
         self.p[self.find(a)] = self.find(b)
 
 
-def count_cycles(G: nx.DiGraph, maxlen: int = 4, tight_ratio: float = 1.25, min_edge_n: int = 2):
+def count_cycles(G: nx.DiGraph, maxlen: int = 4, tight_ratio: float = 1.25, min_edge_n: int = 2,
+                 max_out: int = 25, budget: int = 20000):
     """Count directed simple cycles of length 3..maxlen through each node.
 
     A cycle is 'tight' when the median edge amounts differ by at most `tight_ratio` (typical of
     round-tripping). Each cycle is found once, from its smallest node.
+
+    Speed guards (so hub-heavy graphs stay tractable): only edges with >= min_edge_n transfers are
+    used, each node keeps its `max_out` largest outgoing edges, the search is confined to strongly
+    connected components (the only place a cycle can live), and each start node gets a step
+    `budget`. When a budget is hit the counts for that start node are a lower bound.
     """
-    nodes = sorted(G.nodes)
-    order = {n: i for i, n in enumerate(nodes)}
-    succ = {n: [(m, G[n][m]["med"]) for m in G.successors(n) if m != n and G[n][m]["n"] >= min_edge_n]
-            for n in nodes}
+    H = nx.DiGraph()
+    for n in G.nodes:
+        cand = [(m, G[n][m]["med"], G[n][m]["total"]) for m in G.successors(n)
+                if m != n and G[n][m]["n"] >= min_edge_n]
+        cand.sort(key=lambda x: -x[2])
+        for m, a, _ in cand[:max_out]:
+            H.add_edge(n, m, med=a)
+    comp_of = {}
+    for k, comp in enumerate(nx.strongly_connected_components(H)):
+        if len(comp) >= 3:
+            for v in comp:
+                comp_of[v] = k
+    order = {n: i for i, n in enumerate(sorted(comp_of))}
+    succ = {n: [(m, H[n][m]["med"]) for m in H.successors(n) if comp_of.get(m) == comp_of[n]] for n in order}
     c3, c4, ct = Counter(), Counter(), Counter()
+    steps = [0]
 
     def dfs(s, cur, path, amts):
         for m, a in succ[cur]:
+            steps[0] += 1
+            if steps[0] > budget:
+                return
             if m == s and len(path) >= 3:
-                tight = max(amts + [a]) / max(min(amts + [a]), 1e-9) <= tight_ratio
+                al = amts + [a]
+                tight = max(al) / max(min(al), 1e-9) <= tight_ratio
                 for v in path:
                     (c3 if len(path) == 3 else c4)[v] += 1
                     if tight:
@@ -65,7 +86,8 @@ def count_cycles(G: nx.DiGraph, maxlen: int = 4, tight_ratio: float = 1.25, min_
             elif order[m] > order[s] and m not in path and len(path) < maxlen:
                 dfs(s, m, path + [m], amts + [a])
 
-    for s in nodes:
+    for s in order:
+        steps[0] = 0
         dfs(s, s, [s], [])
     return c3, c4, ct
 
@@ -79,8 +101,12 @@ def _longest_zero_run(row):
 
 
 def build_features(ds: Dataset, t0: int = 0, t1: int = None, use_controller_edges: bool = True,
-                   include_proposed: bool = False) -> pd.DataFrame:
+                   include_proposed: bool = False, use_contact_links: bool = True) -> pd.DataFrame:
+    """use_controller_edges=False and use_contact_links=False together give a 'transfers only' view:
+    no ownership, address or phone information at all (for AML-Data this isolates IBM's own signal)."""
     t1 = ds.horizon if t1 is None else t1
+    opts = ds.meta.get("feature_opts", {})
+    cycle_min_n = opts.get("cycle_min_n", 2)
     comp = ds.companies.set_index("company_id")
     ids = comp.index
     F = pd.DataFrame(index=ids)
@@ -141,8 +167,9 @@ def build_features(ds: Dataset, t0: int = 0, t1: int = None, use_controller_edge
     F["cpty_hhi"] = pairs_dir.groupby("c")["share2"].sum().reindex(ids).fillna(1.0)
 
     ev = pd.concat([tx[["src", "t"]].rename(columns={"src": "c"}), tx[["dst", "t"]].rename(columns={"dst": "c"})]).dropna()
-    nweeks = max(1, int(np.ceil((t1 - t0) / 7)))
-    ev["w"] = ((ev.t - t0) // 7).astype(int).clip(0, nweeks - 1)
+    bin_days = 7 if (t1 - t0) >= 120 else 1          # weekly bins; daily bins for short horizons
+    nweeks = max(1, int(np.ceil((t1 - t0) / bin_days)))
+    ev["w"] = ((ev.t - t0) // bin_days).astype(int).clip(0, nweeks - 1)
     M = ev.groupby(["c", "w"]).size().unstack(fill_value=0).reindex(index=ids, columns=range(nweeks), fill_value=0)
     Mv = M.to_numpy(dtype=float)
     tot_ev = Mv.sum(1)
@@ -169,14 +196,17 @@ def build_features(ds: Dataset, t0: int = 0, t1: int = None, use_controller_edge
     F["reciprocal_partners"] = pd.Series({u: sum(1 for v in G.successors(u) if G.has_edge(v, u)) for u in G.nodes}).reindex(ids)
     F["pagerank"] = pd.Series(nx.pagerank(G, weight="total", max_iter=100)).reindex(ids) * len(ids)
     F["clustering"] = pd.Series(nx.clustering(G.to_undirected())).reindex(ids)
-    c3, c4, ct = count_cycles(G)
-    F["cycles3"] = pd.Series(c3).reindex(ids).fillna(0)
-    F["cycles4"] = pd.Series(c4).reindex(ids).fillna(0)
-    F["tight_cycles"] = pd.Series(ct).reindex(ids).fillna(0)
+    c3, c4, ct = count_cycles(G, min_edge_n=cycle_min_n)
+    F["cycles3"] = pd.Series(c3, dtype=float).reindex(ids).fillna(0)
+    F["cycles4"] = pd.Series(c4, dtype=float).reindex(ids).fillna(0)
+    F["tight_cycles"] = pd.Series(ct, dtype=float).reindex(ids).fillna(0)
 
     # ------------------------------------------------------------------ identity + controller features
     contacts, _ = resolve_identifiers(ds.company_contacts, include_proposed=include_proposed)
     contacts = contacts[contacts.start_day < t1].set_index("company_id").reindex(ids)
+    if not use_contact_links:                      # every company gets private keys -> nothing is shared
+        contacts["addr_key"] = [f"{c}#a" for c in contacts.index]
+        contacts["phone_key"] = [f"{c}#p" for c in contacts.index]
     addr_sz = contacts.groupby("addr_key")["addr_key"].transform("size") - 1
     ph_sz = contacts.groupby("phone_key")["phone_key"].transform("size") - 1
     F["addr_group_size"] = addr_sz.values

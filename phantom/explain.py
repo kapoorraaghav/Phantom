@@ -10,16 +10,18 @@ from .config import HIGH_P, REVIEW_P, CONTROLLER_TYPES, ITEM_SECTOR
 from .entity_resolution import resolve_identifiers
 
 
-def assign_tiers(P: pd.Series, F: pd.DataFrame) -> pd.Series:
+def assign_tiers(P: pd.Series, F: pd.DataFrame, horizon: int = 365) -> pd.Series:
     """Low / Review / High / Needs more data.
 
     'Needs more data' when the score cannot be trusted:
-      * fewer than 10 transaction events, or less than 60 days of history, OR
+      * too few transaction events (10 over a year-long horizon; 3 when the horizon is under 120 days,
+        e.g. the 12-day IBM sample), or less than 60 days of history, OR
       * the score is in the Review..High band but there is no relationship or shared-identifier
         evidence at all (behaviour-only suspicion with nothing to corroborate it).
     """
     tier = np.where(P >= HIGH_P, "High", np.where(P >= REVIEW_P, "Review", "Low")).astype(object)
-    thin = (F.n_tx < 10) | (F.age_days < 60)
+    min_tx = 10 if horizon >= 120 else 3
+    thin = (F.n_tx < min_tx) | (F.age_days < 60)
     no_ev = (F.ev_n_links == 0) & (P >= REVIEW_P) & (P < HIGH_P)
     tier[(thin | no_ev).to_numpy()] = "Needs more data"
     return pd.Series(tier, index=P.index)
@@ -29,8 +31,9 @@ def _pct(F, col, v):
     return float((F[col] <= v).mean() * 100)
 
 
-def tight_cycle_paths(ds, company, t0=0, t1=None, maxlen=4, ratio=1.25, min_n=2, limit=3):
+def tight_cycle_paths(ds, company, t0=0, t1=None, maxlen=4, ratio=1.25, min_n=None, limit=3):
     t1 = ds.horizon if t1 is None else t1
+    min_n = ds.meta.get("feature_opts", {}).get("cycle_min_n", 2) if min_n is None else min_n
     inv = ds.invoices[(ds.invoices.day >= t0) & (ds.invoices.day < t1)]
     agg = inv.groupby(["issuer_id", "receiver_id"])["amount"].agg(n="size", med="median").reset_index()
     agg = agg[agg.n >= min_n]
@@ -135,6 +138,7 @@ def candidate_clusters(ds, scores: pd.Series, tiers: pd.Series, F: pd.DataFrame,
     or have a direct invoice relationship. Returns a list of clusters with their supporting edges.
     """
     flagged = set(tiers[tiers.isin(["High", "Review"])].index)
+    flagged |= set(scores[(tiers == "Needs more data") & (scores >= REVIEW_P)].index)   # thin history but suspicious
     G = nx.Graph()
     G.add_nodes_from(flagged)
     edges = {}

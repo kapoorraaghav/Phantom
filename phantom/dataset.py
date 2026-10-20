@@ -35,6 +35,9 @@ class Dataset:
         p = Path(path)
         kw = {t: pd.read_parquet(p / f"{t}.parquet") for t in TABLES}
         kw["meta"] = json.loads((p / "meta.json").read_text(encoding="utf-8"))
+        if "name" not in kw["companies"].columns:      # datasets saved before names existed
+            from .names import make_company_names
+            kw["companies"].insert(1, "name", make_company_names(kw["meta"]["config"]["seed"], kw["companies"]["sector"]))
         return cls(**kw)
 
     @property

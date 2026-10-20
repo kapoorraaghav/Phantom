@@ -1,0 +1,429 @@
+[
+ {
+  "cluster_id": "K000",
+  "members": [
+   "C000544",
+   "C000967",
+   "C001987",
+   "C002429",
+   "C005048",
+   "C005674"
+  ],
+  "size": 6,
+  "mean_score": 0.6455361925746642,
+  "evidence": [
+   {
+    "a": "C000544",
+    "b": "C005048",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000967",
+    "b": "C005048",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C001987",
+    "b": "C005048",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C002429",
+    "b": "C005048",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C005048",
+    "b": "C005674",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000544",
+    "b": "C000967",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000544",
+    "b": "C001987",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000544",
+    "b": "C002429",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000544",
+    "b": "C005674",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000967",
+    "b": "C002429",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C001987",
+    "b": "C002429",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C002429",
+    "b": "C005674",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C000967",
+    "b": "C001987",
+    "why": [
+     "shared address",
+     "shared controller P00051"
+    ]
+   },
+   {
+    "a": "C001987",
+    "b": "C005674",
+    "why": [
+     "shared address",
+     "shared controller P00051"
+    ]
+   },
+   {
+    "a": "C000967",
+    "b": "C005674",
+    "why": [
+     "shared address",
+     "shared controller P00051"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K001",
+  "members": [
+   "C000997",
+   "C001374",
+   "C003845",
+   "C004689",
+   "C006626",
+   "C006630"
+  ],
+  "size": 6,
+  "mean_score": 0.7462392329294069,
+  "evidence": [
+   {
+    "a": "C000997",
+    "b": "C006626",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C001374",
+    "b": "C006626",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C003845",
+    "b": "C006626",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C004689",
+    "b": "C006626",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C006626",
+    "b": "C006630",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C000997",
+    "b": "C001374",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C000997",
+    "b": "C003845",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C000997",
+    "b": "C004689",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C000997",
+    "b": "C006630",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C001374",
+    "b": "C006630",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C003845",
+    "b": "C006630",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C004689",
+    "b": "C006630",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C001374",
+    "b": "C003845",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C003845",
+    "b": "C004689",
+    "why": [
+     "shared controller P00059"
+    ]
+   },
+   {
+    "a": "C001374",
+    "b": "C004689",
+    "why": [
+     "shared controller P00059"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K002",
+  "members": [
+   "C001734",
+   "C003056",
+   "C005271",
+   "C005396",
+   "C007559"
+  ],
+  "size": 5,
+  "mean_score": 0.7179981827881061,
+  "evidence": [
+   {
+    "a": "C001734",
+    "b": "C003056",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C003056",
+    "b": "C005271",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C003056",
+    "b": "C005396",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C003056",
+    "b": "C007559",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C001734",
+    "b": "C005271",
+    "why": [
+     "2 invoices C005271\u2192C001734",
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C001734",
+    "b": "C005396",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C001734",
+    "b": "C007559",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C005271",
+    "b": "C005396",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C005396",
+    "b": "C007559",
+    "why": [
+     "shared controller P00060"
+    ]
+   },
+   {
+    "a": "C005271",
+    "b": "C007559",
+    "why": [
+     "shared controller P00060"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K003",
+  "members": [
+   "C001614",
+   "C004256",
+   "C005809"
+  ],
+  "size": 3,
+  "mean_score": 0.5736936813982932,
+  "evidence": [
+   {
+    "a": "C001614",
+    "b": "C005809",
+    "why": [
+     "shared address"
+    ]
+   },
+   {
+    "a": "C004256",
+    "b": "C005809",
+    "why": [
+     "2 invoices C004256\u2192C005809",
+     "shared address"
+    ]
+   },
+   {
+    "a": "C001614",
+    "b": "C004256",
+    "why": [
+     "shared address",
+     "shared controller P00050"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K004",
+  "members": [
+   "C001386",
+   "C006493",
+   "C006772"
+  ],
+  "size": 3,
+  "mean_score": 0.6568381849141319,
+  "evidence": [
+   {
+    "a": "C001386",
+    "b": "C006772",
+    "why": [
+     "shared phone"
+    ]
+   },
+   {
+    "a": "C001386",
+    "b": "C006493",
+    "why": [
+     "shared controller P00057"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K005",
+  "members": [
+   "C006742",
+   "C007509"
+  ],
+  "size": 2,
+  "mean_score": 0.7090371239150544,
+  "evidence": [
+   {
+    "a": "C006742",
+    "b": "C007509",
+    "why": [
+     "shared controller P00052"
+    ]
+   }
+  ]
+ },
+ {
+  "cluster_id": "K006",
+  "members": [
+   "C004146",
+   "C007991"
+  ],
+  "size": 2,
+  "mean_score": 0.4600644954753604,
+  "evidence": [
+   {
+    "a": "C004146",
+    "b": "C007991",
+    "why": [
+     "shared address",
+     "shared controller P00055",
+     "shared phone"
+    ]
+   }
+  ]
+ }
+]

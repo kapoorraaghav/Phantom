@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 from .config import *
 from .dataset import Dataset
+from .names import make_company_names
 
 FIRST = ["Rajesh", "Amit", "Sunita", "Priya", "Vikram", "Neha", "Arjun", "Kavita", "Manoj", "Anita",
          "Suresh", "Pooja", "Rahul", "Deepa", "Sanjay", "Meera", "Karan", "Ritu", "Vivek", "Asha"]
@@ -52,57 +53,14 @@ class _Flows:
         return pd.DataFrame(self.rows, columns=["issuer", "receiver", "amount", "day", "lag", "item"])
 
 
-def generate(cfg: GenConfig) -> Dataset:
-    rng = np.random.default_rng(cfg.seed)
-    n, H = cfg.n_companies, cfg.horizon_days
-    cid = np.array([f"C{i:05d}" for i in range(n)])
+def identity_layer(rng, cfg, cid, region, reg_day, rings, groups, cowork, ring_of, group_of):
+    """People, true + observed controller edges, addresses and phones.
 
-    sector = rng.choice(SECTOR_LIST, n)
-    size = rng.choice(SIZES, n, p=[0.55, 0.33, 0.12])
-    archetype = rng.choice(ARCHETYPES, n, p=[0.78, 0.08, 0.07, 0.07])
-    region = rng.choice(REGIONS, n)
-    reg_day = -rng.integers(30, 365 * 15, n)
-    young = rng.random(n) < 0.10
-    reg_day[young] = -rng.integers(30, 365, n)[young]
-
-    # ---------------------------------------------------------------- group assignment
-    perm = rng.permutation(n)
-    cursor = 0
-    rings = []                       # list of dicts
-    target = int(cfg.ring_fraction * n)
-    used = 0
-    while used < target:
-        k = int(rng.integers(cfg.ring_size[0], cfg.ring_size[1] + 1))
-        members = perm[cursor:cursor + k]
-        cursor += k
-        used += k
-        typ = str(rng.choice(TYPOLOGIES, p=np.array(cfg.typology_probs) / sum(cfg.typology_probs)))
-        rings.append(dict(id=f"R{len(rings):03d}", members=members, typology=typ,
-                          seed=int(rng.integers(0, 2**31 - 1))))
-    groups = []
-    gtarget, gused = int(cfg.benign_group_fraction * n), 0
-    while gused < gtarget:
-        k = int(rng.integers(2, 5))
-        groups.append(dict(id=f"G{len(groups):03d}", members=perm[cursor:cursor + k]))
-        cursor += k
-        gused += k
-    cowork = []
-    for s in range(cfg.coworking_sites):
-        k = int(rng.integers(cfg.coworking_size[0], cfg.coworking_size[1] + 1))
-        cowork.append(dict(id=f"W{s:03d}", members=perm[cursor:cursor + k]))
-        cursor += k
-
-    ring_of = {int(i): r for r in rings for i in r["members"]}
-    group_of = {int(i): g["id"] for g in groups for i in g["members"]}
-    for w in cowork:
-        for i in w["members"]:
-            group_of[int(i)] = w["id"]
-    for r in rings:                              # ring members are younger on average
-        for i in r["members"]:
-            if rng.random() < 0.4:
-                reg_day[i] = -rng.integers(60, 500)
-
-    # ---------------------------------------------------------------- people & control edges
+    Shared by the pure-synthetic generator and the AML-Data loader. Only the ring / group
+    structure passed in decides who shares a controller, address or phone.
+    Returns (people, true_edges, rel, contacts, controller_of).
+    """
+    n = len(cid)
     people, true_edges = [], []
 
     def new_person():
@@ -202,6 +160,62 @@ def generate(cfg: GenConfig) -> Dataset:
         "record_source": "registry_filing",
         "start_day": reg_day,
     })
+
+    return people, true_edges, rel, contacts, controller_of
+
+
+def generate(cfg: GenConfig) -> Dataset:
+    rng = np.random.default_rng(cfg.seed)
+    n, H = cfg.n_companies, cfg.horizon_days
+    cid = np.array([f"C{i:05d}" for i in range(n)])
+
+    sector = rng.choice(SECTOR_LIST, n)
+    size = rng.choice(SIZES, n, p=[0.55, 0.33, 0.12])
+    archetype = rng.choice(ARCHETYPES, n, p=[0.78, 0.08, 0.07, 0.07])
+    region = rng.choice(REGIONS, n)
+    reg_day = -rng.integers(30, 365 * 15, n)
+    young = rng.random(n) < 0.10
+    reg_day[young] = -rng.integers(30, 365, n)[young]
+
+    # ---------------------------------------------------------------- group assignment
+    perm = rng.permutation(n)
+    cursor = 0
+    rings = []                       # list of dicts
+    target = int(cfg.ring_fraction * n)
+    used = 0
+    while used < target:
+        k = int(rng.integers(cfg.ring_size[0], cfg.ring_size[1] + 1))
+        members = perm[cursor:cursor + k]
+        cursor += k
+        used += k
+        typ = str(rng.choice(TYPOLOGIES, p=np.array(cfg.typology_probs) / sum(cfg.typology_probs)))
+        rings.append(dict(id=f"R{len(rings):03d}", members=members, typology=typ,
+                          seed=int(rng.integers(0, 2**31 - 1))))
+    groups = []
+    gtarget, gused = int(cfg.benign_group_fraction * n), 0
+    while gused < gtarget:
+        k = int(rng.integers(2, 5))
+        groups.append(dict(id=f"G{len(groups):03d}", members=perm[cursor:cursor + k]))
+        cursor += k
+        gused += k
+    cowork = []
+    for s in range(cfg.coworking_sites):
+        k = int(rng.integers(cfg.coworking_size[0], cfg.coworking_size[1] + 1))
+        cowork.append(dict(id=f"W{s:03d}", members=perm[cursor:cursor + k]))
+        cursor += k
+
+    ring_of = {int(i): r for r in rings for i in r["members"]}
+    group_of = {int(i): g["id"] for g in groups for i in g["members"]}
+    for w in cowork:
+        for i in w["members"]:
+            group_of[int(i)] = w["id"]
+    for r in rings:                              # ring members are younger on average
+        for i in r["members"]:
+            if rng.random() < 0.4:
+                reg_day[i] = -rng.integers(60, 500)
+
+    people, true_edges, rel, contacts, controller_of = identity_layer(
+        rng, cfg, cid, region, reg_day, rings, groups, cowork, ring_of, group_of)
 
     # ---------------------------------------------------------------- accounts
     acc_rows, acc_of = [], {}
@@ -343,14 +357,15 @@ def generate(cfg: GenConfig) -> Dataset:
 
     # ---------------------------------------------------------------- tables
     companies = pd.DataFrame({
-        "company_id": cid, "sector": sector, "declared_size": size,
+        "company_id": cid, "name": make_company_names(cfg.seed, sector), "sector": sector, "declared_size": size,
         "registration_date": pd.Timestamp("2025-01-01") + pd.to_timedelta(reg_day, unit="D"),
         "reg_day": reg_day, "region": region, "status": "active",
     })
     gt = pd.DataFrame({"entity_id": cid, "ring_id": None, "controller_id": [controller_of[i] for i in range(n)],
                        "typology": "none", "injection_seed": -1, "synthetic_label": 0,
                        "archetype": archetype,
-                       "group_id": [group_of.get(i) for i in range(n)]})
+                       "group_id": [group_of.get(i) for i in range(n)],
+                       "in_eval": True})
     for r in rings:
         for i in r["members"]:
             gt.loc[int(i), ["ring_id", "typology", "injection_seed", "synthetic_label"]] = \
